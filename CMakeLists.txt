@@ -239,11 +239,7 @@ if(NOT CMAKE_VERSION VERSION_LESS 2.8.8)
 endif()
 
 if (BUILD_STATIC)
-	if(NOT CMAKE_VERSION VERSION_LESS 2.8.8)
-		add_library(cryptopp-static STATIC $<TARGET_OBJECTS:cryptopp-object>)
-	else()
-		add_library(cryptopp-static STATIC ${cryptopp_SOURCES})
-	endif()
+	add_library(cryptopp-static STATIC ${cryptopp_SOURCES})
 
 	if (NOT CMAKE_VERSION VERSION_LESS 2.8.12)
 		target_include_directories(cryptopp-static PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}> $<INSTALL_INTERFACE:include/cryptopp>)
