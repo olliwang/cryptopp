@@ -562,6 +562,11 @@ set(cryptopp_SOURCES
     ${cryptopp_SOURCES}
     )
 
+if(ANDROID)
+    include_directories(${ANDROID_NDK}/sources/android/cpufeatures)
+    list(APPEND cryptopp_SOURCES ${ANDROID_NDK}/sources/android/cpufeatures/cpu-features.c)
+endif()
+
 set(cryptopp_SOURCES_ASM)
 
 if (MSVC AND NOT DISABLE_ASM)
