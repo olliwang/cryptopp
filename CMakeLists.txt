@@ -82,7 +82,7 @@ option(DISABLE_SSE4 "Disable SSE4" OFF)
 option(DISABLE_AESNI "Disable AES-NI" ON)
 option(DISABLE_SHA "Disable SHA" OFF)
 option(DISABLE_AVX "Disable AVX" OFF)
-option(DISABLE_AVX2 "Disable AVX2" OFF)
+option(DISABLE_AVX2 "Disable AVX2" ON)
 option(CRYPTOPP_NATIVE_ARCH "Enable native architecture" OFF)
 set(CRYPTOPP_DATA_DIR "" CACHE PATH "Crypto++ test data directory")
 
